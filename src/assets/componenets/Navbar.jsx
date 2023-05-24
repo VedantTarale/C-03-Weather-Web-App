@@ -1,7 +1,35 @@
+import React, { useState, useEffect } from "react";
 import { color } from "framer-motion";
-import React from "react";
 
 const Navbar = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const navbarStyle = {
+    position: isSticky ? "sticky" : "static",
+    top: "0",
+backdropFilter: "brightness(60%)",
+    zIndex: "100",
+    color: "white",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: 'transparent',
+    padding: "10px 20px",
+    boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
+  };
+
   const handleHover = (event) => {
     event.target.style.color = "#87CEFA";
   };
@@ -10,7 +38,7 @@ const Navbar = () => {
     event.target.style.color = "white";
   };
   return (
-    <nav style={styles.navbar}>
+    <nav style={navbarStyle}>
       <div style={styles.logoname}>
         <div>
           <img
@@ -61,17 +89,9 @@ const Navbar = () => {
 };
 
 const styles = {
-  navbar: {
-    color: "white",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    backgroundColor: "black",
-    padding: "10px 20px",
-    boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
-  },
   logoname: {
     display: "flex",
+    cursor: "pointer"
   },
   logo1: {
     marginTop: "16px",
