@@ -45,7 +45,7 @@ const Input = () => {
   };
   return (
     <>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center" id="input">
         <div className="basis-full flex items-center justify-center md:basis-7/12">
           <form>
             <input
