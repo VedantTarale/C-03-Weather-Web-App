@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { color } from "framer-motion";
+import logo_icon from "../png/logo_icon.png";
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -19,13 +19,13 @@ const Navbar = () => {
   const navbarStyle = {
     position: isSticky ? "sticky" : "static",
     top: "0",
-backdropFilter: "brightness(60%) blur(5px)",
+    backdropFilter: "brightness(60%) blur(5px)",
     zIndex: "100",
     color: "white",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: 'transparent',
+    backgroundColor: "transparent",
     padding: "10px 20px",
     boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
   };
@@ -42,10 +42,11 @@ backdropFilter: "brightness(60%) blur(5px)",
       <div style={styles.logoname}>
         <div>
           <img
-            height="70"
-            width="70"
-            src="/src/assets/png/logo_white.png"
+            height="50%"
+            width="50%"
+            src={logo_icon}
             alt=""
+            className="rounded-2xl"
           />
         </div>
         <div style={styles.name}>
@@ -70,7 +71,7 @@ backdropFilter: "brightness(60%) blur(5px)",
               onMouseEnter={handleHover}
               onMouseLeave={handleLeave}
             >
-              Search City
+              Get Forecast
             </a>
           </li>
           <li style={styles.menuItem}>
@@ -91,14 +92,14 @@ backdropFilter: "brightness(60%) blur(5px)",
 const styles = {
   logoname: {
     display: "flex",
-    cursor: "pointer"
+    cursor: "pointer",
   },
   logo1: {
-    marginTop: "16px",
-    fontSize: "20px",
+    marginTop: "10px",
+    fontSize: "36px",
   },
   logo2: {
-    fontSize: "15px",
+    fontSize: "25px",
   },
   name: {
     display: "block",
