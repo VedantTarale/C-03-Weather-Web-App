@@ -2,7 +2,7 @@ import { logo_no_bg } from '../../assets'
 
 const Logo = () => {
   return (
-    <div className="w-full">
+    <div className="w-full" id='home'>
       <div className="w-full">
         <p className='py-5 text-7xl text-secondary font-bold text-center'> Weather Web App</p>
       </div>

@@ -58,7 +58,7 @@ const Navbar = () => {
         <ul style={styles.menu}>
           <li style={styles.menuItem}>
             <a
-              href="#Home"
+              href="#home"
               onMouseEnter={handleHover}
               onMouseLeave={handleLeave}
             >
@@ -67,7 +67,7 @@ const Navbar = () => {
           </li>
           <li style={styles.menuItem}>
             <a
-              href="#Input"
+              href="#input"
               onMouseEnter={handleHover}
               onMouseLeave={handleLeave}
             >
@@ -76,7 +76,7 @@ const Navbar = () => {
           </li>
           <li style={styles.menuItem}>
             <a
-              href="#Blogs"
+              href="#blogs"
               onMouseEnter={handleHover}
               onMouseLeave={handleLeave}
             >
