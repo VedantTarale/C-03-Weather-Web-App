@@ -19,7 +19,7 @@ const Navbar = () => {
   const navbarStyle = {
     position: isSticky ? "sticky" : "static",
     top: "0",
-backdropFilter: "brightness(60%)",
+backdropFilter: "brightness(60%) blur(5px)",
     zIndex: "100",
     color: "white",
     display: "flex",
