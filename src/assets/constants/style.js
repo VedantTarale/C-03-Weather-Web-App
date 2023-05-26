@@ -15,6 +15,11 @@ const styles = {
     back: "bg-[#e9d8fd] text-black rounded-md font-medium my-3 px-5 py-2",
 
     //ethernet-frame
-    ethernet_btn: "p-2 mr-1 border-2 transition-all hover:-translate-y-1 ease-in-out"
+    ethernet_btn: "p-2 mr-1 border-2 transition-all hover:-translate-y-1 ease-in-out",
+
+    blog_btn: "my-9 mx-auto py-4 bg-[#e9d8fd] w-[200px] rounded-md font-medium text-center text-black  text-xl",
+    blog_btn_1: "my-1 mx-auto py-4 bg-[#e9d8fd] w-[200px] rounded-md font-medium text-center text-black  text-xl",
+
+    blog_btn_mobile: "bg-[#e9d8fd] w-[200px] h-[75px] rounded-md font-medium text-center text-black  text-xl basis-5/12 m-2 border-2 border-primary"
 }
 export default styles
