@@ -54,7 +54,7 @@ const Navbar = () => {
           <h4 style={styles.logo2}>Web App</h4>
         </div>
       </div>
-      <div>
+      <div className="hidden md:block">
         <ul style={styles.menu}>
           <li style={styles.menuItem}>
             <a

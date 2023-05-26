@@ -3,7 +3,6 @@ import styles from "../../styles";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import weather from "../lotties/weather.json";
 import Linechart from "./charts/Linechart";
-import JSONPretty from "react-json-pretty";
 import Weathercurrent from "./current";
 const Input = () => {
   const [location, setLocation] = useState("");
@@ -47,18 +46,22 @@ const Input = () => {
     <>
       <div className="flex flex-wrap justify-center" id="input">
         <div className="basis-full flex items-center justify-center md:basis-7/12">
-          <form>
-            <input
-              type="text"
-              value={location}
-              className={styles.textbox}
-              placeholder="Enter the Location..."
-              onChange={(e) => setLocation(e.target.value)}
-            />
-          </form>
-          <button className={styles.btn} onClick={getWeather}>
-            Get Forecast
-          </button>
+          <div className="flex flex-wrap md:flex-nowrap">
+            <form className="basis-full md:basis-5/12">
+              <input
+                type="text"
+                value={location}
+                className={styles.textbox}
+                placeholder="Enter the Location..."
+                onChange={(e) => setLocation(e.target.value)}
+              />
+            </form>
+            <div className="flex justify-center basis-full md:basis-5/12">
+              <button className={styles.btn} onClick={getWeather}>
+                Get Forecast
+              </button>
+            </div>
+          </div>
         </div>
         <div className="basis-full md:basis-5/12">
           <div className="flex justify-center">
