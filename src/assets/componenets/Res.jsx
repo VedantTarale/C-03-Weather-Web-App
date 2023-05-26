@@ -74,7 +74,7 @@ function Res() {
         <div className="w-full h-[5px] rounded-3xl bg-pink-300 my-3"></div>
 
         <div>
-          <ul className={`ml-5 ${topic!=0? 'hidden':'inline'} md:inline`}>
+          <ul className={`ml-5 ${topic != 0 ? "hidden" : "inline"} md:inline`}>
             <li className="mb-1 text-left">{http_rs_text.para1}</li>
             <li className="mb-1 text-left">{http_rs_text.para3}</li>
           </ul>
