@@ -28,6 +28,7 @@ const Input = () => {
             },
           ],
         });
+        setLocation("");
         setCurrentData({
           name: json.location.name,
           weatherType: json.current.condition.text,
@@ -63,25 +64,25 @@ const Input = () => {
             </div>
           </div>
         </div>
-        <div className="basis-full md:basis-5/12">
-          <div className="flex justify-center">
-            <Player autoplay loop src={weather} style={{ height: "512px" }}>
-              <Controls
-                visible={false}
-                buttons={["play", "repeat", "frame", "debug"]}
-              />
-            </Player>
+        {hourlyData == "" && (
+          <div className="basis-full md:basis-5/12">
+            <div className="flex justify-center">
+              <Player autoplay loop src={weather} style={{ height: "512px" }}>
+                <Controls
+                  visible={false}
+                  buttons={["play", "repeat", "frame", "debug"]}
+                />
+              </Player>
+            </div>
           </div>
-        </div>
+        )}
       </div>
-      <div className="flex flex-wrap justify-center">
-        <div className="basis-full flex items-center justify-center md:basis-7/12"></div>
-      </div>
-      <div className="flex items-center">
-        <div className="basis-3/5" style={style}>
-          {hourlyData != "" && <Linechart chartdata={hourlyData} />}
+
+      <div className="flex items-center flex-wrap-reverse">
+        <div className="basis-full md:basis-3/5" style={style}>
+          {hourlyData != "" && <Linechart chartdata={hourlyData}/>}
         </div>
-        <div className="basis-2/5" style={style}>
+        <div className="basis-full md:basis-2/5" style={style}>
           {CurrentData != "" && (
             <Weathercurrent
               city={CurrentData.name}

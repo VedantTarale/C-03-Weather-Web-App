@@ -1,11 +1,11 @@
 
 .weather-container {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(10,10,10,0.5);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 25px;
     color: #5B8FB9;
     backdrop-filter: blur(5px);
-    border-color: #F4EEE0;
+    border: 4px solid #000;
    
   }
   
