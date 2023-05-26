@@ -13,67 +13,81 @@ function Api() {
   const [topic, setTopic] = useState(0);
   return (
     <div className="py-6  flex justify-center text-offWhite  text-xl text-left">
-      <div className="flex  flex-wrap w-[60%]">
+      <div className="flex  flex-wrap w-[100%] md:w-[60%]">
         <div className={`text-center basis-full ${styles.title}`}>API</div>
 
         <div className="basis-full flex justify-center">
           <div
-            className={`flex justify-center bg-[#e9d8fd] ${styles.btn_grp}`}
+            className={`flex justify-center flex-wrap ${styles.btn_grp}`}
             id="button-grp"
           >
             <button
               onClick={() => setTopic(1)}
               className={`${
-                topic == 1 ? "bg-black text-[#e9d8fd]" : "bg-transparent  text-black"
-              } ${styles.button_start}`}
+                topic == 1
+                  ? "bg-black text-[#e9d8fd]"
+                  : "bg-[#e9d8fd]  text-black"
+              } ${styles.mob} ${styles.button_start}`}
             >
               Authentication
             </button>
             <button
               onClick={() => setTopic(2)}
               className={`${
-                topic == 2 ? "bg-black text-[#e9d8fd]" : "bg-transparent  text-black"
-              } ${styles.button}`}
+                topic == 2
+                  ? "bg-black text-[#e9d8fd]"
+                  : "bg-[#e9d8fd]  text-black"
+              } ${styles.mob} ${styles.button}`}
             >
               Documentation
             </button>
             <button
               onClick={() => setTopic(3)}
               className={`${
-                topic == 3 ? "bg-black text-[#e9d8fd]" : "bg-transparent  text-black"
-              } ${styles.button}`}
+                topic == 3
+                  ? "bg-black text-[#e9d8fd]"
+                  : "bg-[#e9d8fd]  text-black"
+              } ${styles.mob} ${styles.button}`}
             >
               Endpoint
             </button>
             <button
               onClick={() => setTopic(4)}
               className={`${
-                topic == 4 ? "bg-black text-[#e9d8fd]" : "bg-transparent  text-black"
-              } ${styles.button}`}
+                topic == 4
+                  ? "bg-black text-[#e9d8fd]"
+                  : "bg-[#e9d8fd]  text-black"
+              } ${styles.mob} ${styles.button}`}
             >
               Purpose
             </button>
             <button
               onClick={() => setTopic(5)}
               className={`${
-                topic == 5 ? "bg-black text-[#e9d8fd]" : "bg-transparent  text-black"
-              } ${styles.button}`}
+                topic == 5
+                  ? "bg-black text-[#e9d8fd]"
+                  : "bg-[#e9d8fd]  text-black"
+              } ${styles.mob} ${styles.button}`}
             >
               Rate
             </button>
             <button
               onClick={() => setTopic(6)}
               className={`${
-                topic == 6 ? "bg-black text-[#e9d8fd]" : "bg-transparent  text-black"
-              } ${styles.button}`}
+                topic == 6
+                  ? "bg-black text-[#e9d8fd]"
+                  : "bg-[#e9d8fd]  text-black"
+              } ${styles.mob} ${styles.button}`}
             >
               Request Response
             </button>
             <button
               onClick={() => setTopic(7)}
               className={`${
-                topic == 7 ? "bg-black text-[#e9d8fd]" : "bg-transparent  text-black"
-              } ${styles.button_end}`}
+                topic == 7
+                  ? "bg-black text-[#e9d8fd]"
+                  : "bg-[#e9d8fd]  text-black"
+              } ${styles.mob} ${styles.button_end}`}
             >
               Type
             </button>
@@ -81,7 +95,7 @@ function Api() {
         </div>
         <div className="w-full h-[5px] rounded-3xl bg-pink-300 my-3"></div>
         <div className="my-10 w-full">
-          <div className="my-5">
+          <div className={`ml-5 ${topic!=0? 'hidden':'inline'} md:inline`}>
             <ul>
               <li className="mb-1">
                 <ul className="ml-5 ">
